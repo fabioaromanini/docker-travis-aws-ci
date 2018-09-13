@@ -18,5 +18,5 @@ RUN npm run build
 
 # PHASE 2: Serve artifact from build phase with nginx
 FROM nginx:alpine
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
